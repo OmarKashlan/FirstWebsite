@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Login - signUp</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+
+</head>
+
+<body>
+
+
+<div class="container" id="container"> <!--وضعها داخل مربع-->
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Create Account</h1>
+			<div class="social-container">
+				<a href="https://www.facebook.com/" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="https://www.google.com/" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="https://www.linkedin.com/feed/" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>او استخدم البريد الالكتروني للتسجيل</span>
+			<input type="text" placeholder="Name" />
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<a href="homescreen.html" target="h"><input type="button" class="sign" value="Sign up"></input></a>		</form>
+	</div>
+
+	
+
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Sign in</h1>
+			<div class="social-container">
+				<a href="https://www.facebook.com/" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="https://www.google.com/" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="https://www.linkedin.com/feed/" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>استخدم بريدك الالكتروني</span>
+			<input type="email" placeholder="Email" required=""  />
+			<input type="password" placeholder="Password" required=""  />
+			<a href="reset.html" target="R">هل نسيت كلمة السر؟</a> <!--استعادة كلمة المرور-->
+		<a href="homescreen.html" target="h"><input type="button" class="sign" value="Sign In"></input></a>
+		</form>
+	</div>
+
+
+
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>لتبقى على تواصل معنا رجاء سجل دخول بمعلوماتك الشخصية</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hi There!</h1>
+				<p>ادخل معلوماتك الشخصية لإنشاء حسابك معنا</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+	
+<script>
+
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+
+
+
+</script>
+</body>
+
+</html>
